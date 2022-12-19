@@ -12,6 +12,7 @@ func new_game() -> void:
 	
 	get_tree().call_group('mobs', 'queue_free')
 	$Player.start($StartPosition.position)
+	$Player/AnimatedSprite.animation = 'right'
 	
 	$StartTimer.start()
 	$Music.play()
